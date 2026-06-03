@@ -1,5 +1,6 @@
 # Dependencies
 node_modules/
+.pnpm-store/
 
 # Next.js build output
 .next/
@@ -8,12 +9,16 @@ out/
 # Production build artifacts
 build/
 dist/
+coverage/
+.turbo/
+*.tsbuildinfo
 
 # Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+*.log
 
 # Environment variables
 .env
@@ -21,6 +26,11 @@ pnpm-debug.log*
 .env.development.local
 .env.test.local
 .env.production.local
+.env.*
+!.env.example
+!.env*.example
+.envrc
+.direnv/
 
 # OS files
 .DS_Store
@@ -29,7 +39,15 @@ pnpm-debug.log*
 .vscode/
 .idea/
 *.swp
+*.swo
 
 # Misc
 *.pem
+*.key
+*.crt
+*.cer
+*.p12
+*.pfx
+*.jks
+*.keystore
 .vercel/
