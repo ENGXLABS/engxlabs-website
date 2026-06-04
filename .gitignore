@@ -51,3 +51,6 @@ pnpm-debug.log*
 *.jks
 *.keystore
 .vercel/
+
+# Design source assets (logos are rendered as inline SVG components)
+engxlabs-logo/
