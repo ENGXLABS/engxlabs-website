@@ -34,33 +34,30 @@ export function LogoMark({ size = 24, color = "#3B82F6", className }: LogoMarkPr
 
 interface LogoProps {
   className?: string;
+  /** Size of the X mark icon embedded in the wordmark (px). Match to ~80% of font-size. */
   markSize?: number;
   textSize?: string;
-  /** "primary" = ENG white / X blue / LABS white  |  "blue" = all white wordmark */
   variant?: "primary" | "blue";
 }
 
-/** Full ENGXLABS logo — mark + wordmark rendered as HTML (no font-in-SVG) */
-export function Logo({ className, markSize = 22, textSize = "text-lg", variant = "blue" }: LogoProps) {
+/**
+ * Full ENGXLABS logo — ENG + [X mark icon] + LABS inline.
+ * The X mark replaces the letter X so there is only one X in the lockup.
+ */
+export function Logo({ className, markSize = 14, textSize = "text-lg", variant = "blue" }: LogoProps) {
+  const textColor = variant === "blue" ? "text-white" : "text-white";
   return (
     <span
-      className={`inline-flex items-center gap-2.5 select-none ${className ?? ""}`}
+      className={`inline-flex items-center select-none ${className ?? ""}`}
       aria-label="ENGXLABS"
     >
-      <LogoMark size={markSize} color="#3B82F6" />
       <span
-        className={`${textSize} font-extrabold tracking-tight leading-none`}
-        style={{ fontFamily: "'Outfit', system-ui, sans-serif", letterSpacing: "-0.4px" }}
+        className={`${textSize} font-extrabold leading-none inline-flex items-center`}
+        style={{ fontFamily: "'Outfit', system-ui, sans-serif", letterSpacing: "-0.3px" }}
       >
-        {variant === "blue" ? (
-          <span className="text-white">ENGXLABS</span>
-        ) : (
-          <>
-            <span className="text-white">ENG</span>
-            <span className="text-[#3B82F6]">X</span>
-            <span className="text-white">LABS</span>
-          </>
-        )}
+        <span className={textColor}>ENG</span>
+        <LogoMark size={markSize} color="#3B82F6" className="mx-[2px] flex-shrink-0" />
+        <span className={textColor}>LABS</span>
       </span>
     </span>
   );

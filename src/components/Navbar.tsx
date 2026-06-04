@@ -36,7 +36,7 @@ export default function Navbar() {
 
         {/* Logo */}
         <a href="#" className="flex-shrink-0 flex items-center" aria-label="ENGXLABS home">
-          <Logo markSize={20} textSize="text-[17px]" variant="blue" />
+          <Logo markSize={14} textSize="text-[17px]" variant="blue" />
         </a>
 
         {/* Desktop nav — centred */}

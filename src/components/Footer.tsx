@@ -54,7 +54,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row md:items-start justify-between gap-12 mb-16">
           <div className="max-w-xs">
             <div className="mb-4">
-              <Logo markSize={18} textSize="text-base" variant="primary" />
+              <Logo markSize={13} textSize="text-base" variant="primary" />
             </div>
             <p className="text-sm text-text-secondary leading-relaxed mb-6">
               Building AI Native Businesses for the Future.
