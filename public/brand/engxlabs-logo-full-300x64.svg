@@ -1,0 +1,7 @@
+<svg width="300" height="64" viewBox="0 0 188 40" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ENGXLABS logo 300x64">
+  <title>ENGXLABS</title>
+  <text x="0" y="28" fill="#FFFFFF" font-family="Outfit, system-ui, sans-serif" font-size="22" font-weight="800" letter-spacing="-0.3px">ENG</text>
+  <rect x="49.25" y="8" width="5.5" height="24" fill="#3B82F6" transform="rotate(45 52 20)"/>
+  <rect x="49.25" y="8" width="5.5" height="24" fill="#3B82F6" transform="rotate(-45 52 20)"/>
+  <text x="64" y="28" fill="#FFFFFF" font-family="Outfit, system-ui, sans-serif" font-size="22" font-weight="800" letter-spacing="-0.3px">LABS</text>
+</svg>
