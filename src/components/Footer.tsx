@@ -37,8 +37,7 @@ const footerSections = [
   {
     category: "Company",
     links: [
-      { label: "Founder LinkedIn", href: "https://www.linkedin.com" },
-      { label: "Company LinkedIn", href: "https://www.linkedin.com" },
+      { label: "Company LinkedIn", href: "https://www.linkedin.com/company/engxlabs/" },
       { label: "GitHub Organization", href: "https://github.com/ENGXLABS" },
       { label: "Email: hello@engxlabs.com", href: "mailto:hello@engxlabs.com" },
       { label: "Location: India", href: "#" },
@@ -129,7 +128,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="pt-8 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-text-muted">
-            © 2024 ENGXLABS. All rights reserved.
+            © 2026 ENGXLABS INC. All rights reserved.
           </p>
           <div className="flex items-center gap-1.5 text-xs text-text-muted">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
