@@ -5,28 +5,44 @@ import { useRef, useState } from "react";
 
 const solutions = [
   {
-    id: "qe",
-    badge: "Quality Engineering",
-    title: "QE Copilot",
-    tagline: "Accelerate quality. Reduce risk.",
+    id: "strategy",
+    badge: "Lifecycle Strategy",
+    title: "AI Lifecycle Strategy Copilot",
+    tagline: "Prioritize the right bets first.",
     description:
-      "Generate test cases, test strategies, automation scripts, and release risk analysis using AI trained on your codebase and quality standards.",
+      "Define how AI fits across Product Development Lifecycle (PDLC), Software Development Lifecycle (SDLC), and Agent Development Lifecycle (ADLC) with clear value milestones.",
     capabilities: [
-      "Intelligent test case generation",
-      "Automation script creation",
-      "Release risk scoring",
-      "Defect pattern analysis",
-      "Test coverage optimization",
+      "PDLC, SDLC, and ADLC maturity assessment",
+      "Use-case prioritization by business impact",
+      "Agent opportunity mapping by function",
+      "Value stream bottleneck identification",
+      "Roadmap and KPI definition",
     ],
     color: "blue",
   },
   {
-    id: "engineering",
-    badge: "Engineering Productivity",
-    title: "Engineering Copilot",
-    tagline: "Ship faster. Build better.",
+    id: "product",
+    badge: "Product Development",
+    title: "Product Copilot",
+    tagline: "Discover faster. Build smarter.",
     description:
-      "Accelerate development workflows, code reviews, documentation, architecture decisions, and knowledge sharing across engineering teams.",
+      "Embed AI into product discovery, backlog shaping, feature definition, and customer feedback loops so product teams ship what matters most.",
+    capabilities: [
+      "Requirements and PRD generation",
+      "Backlog refinement and story slicing",
+      "Feature impact prediction",
+      "User feedback clustering",
+      "Roadmap scenario simulation",
+    ],
+    color: "cyan",
+  },
+  {
+    id: "engineering",
+    badge: "Software Development",
+    title: "Engineering Copilot",
+    tagline: "Design, code, review, release.",
+    description:
+      "Accelerate core SDLC activities from architecture and implementation to code review, documentation, and release readiness.",
     capabilities: [
       "Intelligent code review",
       "Architecture guidance",
@@ -37,50 +53,34 @@ const solutions = [
     color: "cyan",
   },
   {
-    id: "delivery",
-    badge: "Delivery Intelligence",
-    title: "Delivery Copilot",
-    tagline: "Visibility at every level.",
+    id: "qe",
+    badge: "Quality Engineering",
+    title: "QE Copilot",
+    tagline: "Shift-left quality. Lower release risk.",
     description:
-      "Automate status reporting, sprint insights, risk tracking, dependency analysis, and executive summaries across your delivery organization.",
+      "Generate test assets, automate validation, and detect release risks early so quality becomes a continuous lifecycle capability.",
     capabilities: [
-      "Automated sprint reports",
-      "Risk & blocker detection",
-      "Executive dashboard generation",
-      "Dependency mapping",
-      "Portfolio forecasting",
+      "Intelligent test case generation",
+      "Automation script creation",
+      "Release risk scoring",
+      "Defect pattern analysis",
+      "Test coverage optimization",
     ],
     color: "violet",
   },
   {
-    id: "knowledge",
-    badge: "Enterprise Knowledge",
-    title: "Knowledge Copilot",
-    tagline: "Every answer. Instantly.",
+    id: "adlcops",
+    badge: "Agent Development Lifecycle",
+    title: "ADLC & AgentOps Copilot",
+    tagline: "Build, govern, and improve agents.",
     description:
-      "Enable secure, AI-powered enterprise search across documentation, internal systems, and organizational knowledge — always accurate, always current.",
+      "Operationalize ADLC with guardrails, observability, evaluation, and continuous optimization for enterprise-grade agent systems.",
     capabilities: [
-      "Semantic enterprise search",
-      "Document intelligence",
-      "Multi-source knowledge graph",
-      "Access-controlled retrieval",
-      "Audit & governance trails",
-    ],
-    color: "blue",
-  },
-  {
-    id: "support",
-    badge: "Customer Experience",
-    title: "Support Copilot",
-    tagline: "Resolve more. Escalate less.",
-    description:
-      "Enhance customer support operations with AI-powered resolution, intelligent routing, sentiment detection, and workflow automation.",
-    capabilities: [
-      "Instant first-line resolution",
-      "Smart escalation routing",
-      "Agent assist in real-time",
-      "Sentiment & intent detection",
-      "CSAT-driven improvement loop",
+      "Agent design and safety patterns",
+      "Agent evaluation and benchmark suites",
+      "Observability and tracing",
+      "Policy, audit, and governance controls",
+      "Continuous tuning and lifecycle management",
     ],
     color: "cyan",
   },
@@ -146,7 +146,7 @@ const colorMap = {
 export default function Solutions() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
-  const [active, setActive] = useState("qe");
+  const [active, setActive] = useState("strategy");
 
   const activeSol = solutions.find((s) => s.id === active)!;
   const c = colorMap[activeSol.color as keyof typeof colorMap];
@@ -165,10 +165,10 @@ export default function Solutions() {
         >
           <p className="section-label">Solutions</p>
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
-            <h2 className="heading-lg text-white max-w-xl">Examples of What We Build</h2>
+            <h2 className="heading-lg text-white max-w-xl">Solutions Across PDLC, SDLC, and ADLC</h2>
             <p className="body-lg max-w-sm">
-              Production-ready AI copilots designed for specific business
-              functions — each one delivering measurable outcomes from day one.
+              We design and deploy AI capabilities across the full product, software,
+              and agent lifecycle so teams move faster with better quality and control.
             </p>
           </div>
         </motion.div>

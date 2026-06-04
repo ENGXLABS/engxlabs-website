@@ -6,38 +6,38 @@ import { useRef, useState } from "react";
 const steps = [
   {
     number: "01",
-    label: "Discover",
+    label: "Lifecycle Strategy",
     duration: "Weeks 1–2",
     description:
-      "Deep-dive into your business objectives, workflows, pain points, and AI opportunities. We map what exists, what's possible, and where AI delivers the most value.",
-    deliverables: ["AI opportunity map", "Workflow analysis", "Readiness report", "Priority ranking"],
+      "Assess readiness and map AI opportunities across Product Development Lifecycle (PDLC), Software Development Lifecycle (SDLC), and Agent Development Lifecycle (ADLC).",
+    deliverables: ["PDLC/SDLC/ADLC readiness map", "Value stream analysis", "Priority use-case ranking", "Transformation KPI baseline"],
     color: "blue",
   },
   {
     number: "02",
-    label: "Design",
+    label: "PDLC Enablement",
     duration: "Weeks 3–4",
     description:
-      "Define the AI architecture, operating model, governance framework, and implementation blueprint. Every technical decision traces back to a business outcome.",
-    deliverables: ["Technical architecture", "Governance framework", "Implementation blueprint", "Success metrics"],
+      "Embed AI in product discovery, requirements, backlog shaping, and roadmap planning so product teams move from ideas to validated priorities faster.",
+    deliverables: ["AI-assisted discovery workflow", "Requirements intelligence model", "Prioritized product backlog", "Roadmap acceleration plan"],
     color: "cyan",
   },
   {
     number: "03",
-    label: "Deploy",
+    label: "SDLC Acceleration",
     duration: "Weeks 5–14",
     description:
-      "Build and integrate AI capabilities directly into real business workflows. Iterative delivery with continuous stakeholder alignment and user adoption focus.",
-    deliverables: ["Working AI system", "Integration testing", "User training", "Go-live support"],
+      "Integrate engineering copilots into architecture, coding, review, QE, and release processes to improve cycle time while strengthening quality.",
+    deliverables: ["Engineering copilot stack", "QE automation uplift", "Release readiness signals", "Developer adoption playbook"],
     color: "violet",
   },
   {
     number: "04",
-    label: "Optimize",
+    label: "ADLC and AgentOps",
     duration: "Ongoing",
     description:
-      "Continuously measure outcomes, improve model performance, expand adoption, and scale AI capabilities as your business grows and objectives evolve.",
-    deliverables: ["Performance monitoring", "Adoption analytics", "Iterative improvements", "Capability expansion"],
+      "Operationalize Agent Development Lifecycle with governance, observability, evaluation, and continuous optimization for enterprise-grade agent systems.",
+    deliverables: ["Agent governance controls", "Evaluation and traceability", "Continuous tuning loop", "Scale and reliability playbook"],
     color: "blue",
   },
 ];
@@ -72,8 +72,8 @@ export default function Framework() {
             The ENGXLABS AI Transformation Framework
           </h2>
           <p className="body-lg">
-            A four-step execution model designed to move organizations from AI
-            readiness to measurable business outcomes.
+            A lifecycle-led execution model that aligns AI transformation across
+            PDLC, SDLC, and ADLC from strategy through scaled operations.
           </p>
         </motion.div>
 

@@ -6,42 +6,42 @@ import { useRef } from "react";
 const services = [
   {
     number: "01",
-    title: "Create an AI Roadmap With Clear ROI",
+    title: "Define PDLC, SDLC, and ADLC Strategy",
     description:
-      "Assess readiness, prioritize the right use cases, and align AI adoption to business goals, timelines, and measurable value.",
-    outcomes: ["AI Readiness Assessment", "Priority Use Case Map", "12-Month Roadmap", "ROI Framework"],
+      "Assess readiness, prioritize high-value opportunities, and align adoption to a single lifecycle strategy across product, engineering, and agent delivery.",
+    outcomes: ["Lifecycle Readiness Assessment", "Priority Use Case Map", "12-Month Transformation Roadmap", "ROI Framework"],
     accent: "blue",
   },
   {
     number: "02",
-    title: "Deploy Intelligent Agents Across Teams",
+    title: "Modernize Product Development With AI",
     description:
-      "Design and launch AI agents that automate complex multi-step workflows and support better decisions in day-to-day operations.",
-    outcomes: ["Workflow Agents", "Decision Automation", "Multi-step Orchestration", "Human-in-the-Loop Design"],
+      "Embed AI across PDLC from discovery and requirements to roadmap and feature planning so product teams ship the right outcomes faster.",
+    outcomes: ["AI-assisted Discovery", "Requirements Intelligence", "Backlog Prioritization", "Roadmap Acceleration"],
     accent: "cyan",
   },
   {
     number: "03",
-    title: "Reduce Manual Work With AI Automation",
+    title: "Accelerate SDLC With Engineering AI",
     description:
-      "Connect systems, teams, and workflows with AI-powered automation that removes bottlenecks and lowers operational overhead.",
-    outcomes: ["Process Mining", "System Integration", "Data Pipeline Automation", "Compliance Workflows"],
+      "Improve design, coding, review, and release workflows with engineering copilots that remove bottlenecks while preserving quality standards.",
+    outcomes: ["Architecture Copilot", "Code Review Intelligence", "Developer Workflow Automation", "Release Readiness Signals"],
     accent: "violet",
   },
   {
     number: "04",
-    title: "Build AI Native Products and Platforms",
+    title: "Shift-Left QE and Release Confidence",
     description:
-      "Build production-grade AI applications, copilots, and knowledge systems that become long-term competitive advantages.",
-    outcomes: ["Custom AI Applications", "RAG Knowledge Systems", "Copilot Development", "AI Platform Engineering"],
+      "Use AI-driven quality engineering to generate tests, increase automation coverage, and catch defects earlier in the lifecycle.",
+    outcomes: ["QE Copilot", "Test Generation", "Automation at Scale", "Release Risk Intelligence"],
     accent: "blue",
   },
   {
     number: "05",
-    title: "Scale Adoption Through Managed AI Operations",
+    title: "Run ADLC and AgentOps at Scale",
     description:
-      "Operate, govern, and continuously optimize your AI stack so outcomes improve as your business scales.",
-    outcomes: ["AI Operations", "Continuous Improvement", "Governance Framework", "Quarterly Reviews"],
+      "Operationalize the Agent Development Lifecycle with governance, observability, and continuous optimization for enterprise-grade agent systems.",
+    outcomes: ["Agent Lifecycle Governance", "Observability and Evaluation", "Continuous Agent Improvement", "Security and Policy Controls"],
     accent: "cyan",
   },
 ];
@@ -73,9 +73,8 @@ export default function Services() {
               Outcome-Driven AI Transformation Services
             </h2>
             <p className="body-lg max-w-md">
-              Five practice areas that cover the full lifecycle of becoming an
-              AI Native organization — from strategy through continuous
-              operation.
+              Five practice areas aligned to PDLC, SDLC, and ADLC so your teams
+              can plan, build, test, and operate AI systems end-to-end.
             </p>
           </div>
         </motion.div>
