@@ -652,11 +652,11 @@ export default function ADLCBlog() {
             animate={heroInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7 }}
           >
-            <div className="flex flex-wrap items-center gap-2 mb-6">
-              <span className="section-label">Deep Dive</span>
-              <span className="text-text-muted text-xs">·</span>
+            <div className="flex flex-wrap items-baseline gap-2 mb-6">
+              <span className="section-label !mb-0">Deep Dive</span>
+              <span className="text-text-muted text-xs leading-none">·</span>
               <span className="text-xs text-text-muted">12 min read</span>
-              <span className="text-text-muted text-xs">·</span>
+              <span className="text-text-muted text-xs leading-none">·</span>
               <span className="text-xs text-text-muted">June 2026</span>
             </div>
 

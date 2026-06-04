@@ -8,7 +8,7 @@ export default function CTA() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="contact" ref={ref} className="relative py-20 md:py-28 lg:py-32 overflow-hidden">
+    <section id="contact" ref={ref} className="relative scroll-mt-24 py-20 md:py-28 lg:py-32 overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
 
       {/* Background effects */}

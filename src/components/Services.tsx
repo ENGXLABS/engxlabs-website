@@ -57,7 +57,7 @@ export default function Services() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="services" ref={ref} className="relative py-20 md:py-28 lg:py-32">
+    <section id="services" ref={ref} className="relative scroll-mt-24 py-20 md:py-28 lg:py-32">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8">

@@ -152,7 +152,7 @@ export default function Solutions() {
   const c = colorMap[activeSol.color as keyof typeof colorMap];
 
   return (
-    <section id="solutions" ref={ref} className="relative py-20 md:py-28 lg:py-32 bg-bg-secondary overflow-hidden">
+    <section id="solutions" ref={ref} className="relative scroll-mt-24 py-20 md:py-28 lg:py-32 bg-bg-secondary overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
 

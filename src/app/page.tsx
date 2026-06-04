@@ -15,12 +15,12 @@ export default function Home() {
     <main className="min-h-screen bg-bg-primary">
       <Navbar />
       <Hero />
-      <Problem />
-      <AINativeEnterprise />
-      <Services />
       <Solutions />
+      <Services />
       <Framework />
       <WhyENGXLABS />
+      <Problem />
+      <AINativeEnterprise />
       <Founder />
       <CTA />
       <Footer />

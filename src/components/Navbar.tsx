@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 import { Logo } from "@/components/Logo";
 
 const navLinks = [
@@ -9,6 +10,7 @@ const navLinks = [
   { label: "Services", href: "#services" },
   { label: "Method", href: "#method" },
   { label: "About", href: "#about" },
+  { label: "Blog", href: "/blog" },
 ];
 
 export default function Navbar() {
@@ -32,21 +34,21 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10 h-[68px] flex items-center justify-between gap-8">
 
         {/* Logo */}
-        <a href="#" className="flex-shrink-0 flex items-center" aria-label="ENGXLABS home">
+        <Link href="/" className="flex-shrink-0 flex items-center" aria-label="ENGXLABS home">
           <Logo markSize={18} textSize="text-[17px]" variant="blue" />
-        </a>
+        </Link>
 
         {/* Desktop nav — centred */}
         <nav className="hidden md:flex items-center gap-1 flex-1 justify-center">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.label}
               href={link.href}
               className="relative px-4 py-2 text-sm font-medium text-text-secondary hover:text-white rounded-lg hover:bg-white/[0.04] transition-all duration-200 group"
             >
               {link.label}
               <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 group-hover:w-3/5 h-px bg-accent-blue/60 transition-all duration-300 rounded-full" />
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -98,14 +100,14 @@ export default function Navbar() {
           >
             <nav className="flex flex-col px-6 py-5 gap-1">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.label}
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
                   className="text-sm font-medium text-text-secondary hover:text-white hover:bg-white/[0.04] px-4 py-3 rounded-xl transition-all duration-200"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
               <div className="h-px bg-white/[0.06] my-2" />
               <a

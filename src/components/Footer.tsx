@@ -27,11 +27,11 @@ const footerSections = [
   {
     category: "Resources",
     links: [
-      { label: "Insights", href: "#" },
-      { label: "AI Transformation Guides", href: "#" },
-      { label: "Industry Playbooks", href: "#" },
-      { label: "Case Studies", href: "#" },
-      { label: "Thought Leadership", href: "#" },
+      { label: "Insights", href: "/blog" },
+      { label: "AI Transformation Guides", href: "/blog/adlc" },
+      { label: "Industry Playbooks", href: "#solutions" },
+      { label: "Case Studies", href: "#services" },
+      { label: "Thought Leadership", href: "/blog" },
     ],
   },
   {
@@ -40,7 +40,7 @@ const footerSections = [
       { label: "Company LinkedIn", href: "https://www.linkedin.com/company/engxlabs/" },
       { label: "GitHub Organization", href: "https://github.com/ENGXLABS" },
       { label: "Email: hello@engxlabs.com", href: "mailto:hello@engxlabs.com" },
-      { label: "Location: India", href: "#" },
+      { label: "Location: India", href: "" },
     ],
   },
 ];
@@ -99,14 +99,18 @@ export default function Footer() {
                 <ul className="space-y-2.5">
                   {section.links.map((link) => (
                     <li key={link.label}>
-                      <a
-                        href={link.href}
-                        target={link.href.startsWith("http") ? "_blank" : undefined}
-                        rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                        className="text-xs text-text-muted hover:text-text-secondary transition-colors"
-                      >
-                        {link.label}
-                      </a>
+                      {link.href ? (
+                        <a
+                          href={link.href}
+                          target={link.href.startsWith("http") ? "_blank" : undefined}
+                          rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                          className="text-xs text-text-muted hover:text-text-secondary transition-colors"
+                        >
+                          {link.label}
+                        </a>
+                      ) : (
+                        <span className="text-xs text-text-muted">{link.label}</span>
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -124,9 +128,10 @@ export default function Footer() {
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
             AI Native Engineering & Transformation
           </div>
-          <div className="flex gap-6">
-            <a href="/privacy" className="text-xs text-text-muted hover:text-text-secondary transition-colors">Privacy Policy</a>
-            <a href="/terms" className="text-xs text-text-muted hover:text-text-secondary transition-colors">Terms of Service</a>
+          <div className="flex items-center gap-3 text-xs text-text-muted">
+            <a href="/privacy" className="hover:text-text-secondary transition-colors">Privacy Policy</a>
+            <span className="text-text-muted/60" aria-hidden="true">|</span>
+            <a href="/terms" className="hover:text-text-secondary transition-colors">Terms of Service</a>
           </div>
         </div>
       </div>
