@@ -87,7 +87,7 @@ export default function WhyENGXLABS() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="about" ref={ref} className="relative py-32 bg-bg-secondary">
+    <section id="about" ref={ref} className="relative py-20 md:py-28 lg:py-32 bg-bg-secondary">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
 
@@ -96,7 +96,7 @@ export default function WhyENGXLABS() {
           initial={{ opacity: 0, y: 24 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-20"
+          className="text-center max-w-3xl mx-auto mb-10 md:mb-16 lg:mb-20"
         >
           <p className="section-label">Why ENGXLABS</p>
           <h2 className="heading-lg text-white mb-6">
@@ -146,11 +146,11 @@ export default function WhyENGXLABS() {
           initial={{ opacity: 0, y: 24 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.5, duration: 0.6 }}
-          className="relative rounded-3xl border border-white/[0.07] bg-white/[0.02] p-12 lg:p-16 text-center overflow-hidden"
+          className="relative rounded-3xl border border-white/[0.07] bg-white/[0.02] p-6 sm:p-10 lg:p-16 text-center overflow-hidden"
         >
           <div className="absolute inset-0 bg-gradient-radial from-accent-blue/[0.04] via-transparent to-transparent" />
           <div className="relative z-10 max-w-3xl mx-auto">
-            <p className="text-2xl lg:text-3xl font-light text-white leading-relaxed mb-6">
+            <p className="text-xl sm:text-2xl lg:text-3xl font-light text-white leading-relaxed mb-6">
               "Every business deserves access to enterprise-grade AI capabilities."
             </p>
             <p className="text-text-secondary leading-relaxed">

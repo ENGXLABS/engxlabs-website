@@ -8,52 +8,60 @@ export default function Founder() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section ref={ref} className="relative py-32 overflow-hidden">
+    <section ref={ref} className="relative py-20 md:py-28 lg:py-32 overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
 
       {/* Ambient */}
       <div className="absolute right-0 bottom-0 w-96 h-96 bg-violet-500/[0.03] rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left: story */}
           <motion.div
             initial={{ opacity: 0, x: -24 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7 }}
           >
-            <p className="section-label">Our Story</p>
+            <p className="section-label">Founder Credibility</p>
             <h2 className="heading-lg text-white mb-8">
-              Why ENGXLABS Was Created
+              Built by Enterprise Engineering Leaders
             </h2>
 
             <div className="space-y-5 text-text-secondary leading-relaxed">
               <p>
-                After spending more than a decade building automation platforms,
-                quality engineering systems, and enterprise delivery frameworks
-                across global technology organizations, one truth became
-                undeniable:
+                ENGXLABS was founded by technology leaders with more than a
+                decade of experience delivering automation, quality
+                engineering, and large-scale software systems across global
+                organizations.
               </p>
               <p className="text-white text-lg font-medium leading-relaxed pl-4 border-l-2 border-accent-blue">
-                Artificial Intelligence will fundamentally transform how
-                businesses operate — and most organizations are not ready for it.
+                We help leadership teams move from AI experimentation to
+                enterprise execution with clear operating models and measurable
+                outcomes.
               </p>
               <p>
-                Most organizations understand the opportunity. But they lack the
-                engineering expertise, the strategic clarity, and the execution
-                capability to realize it. They get stuck between curiosity and
-                transformation.
+                Experience includes EPAM Systems, Navi, Rakuten, OkCredit, and
+                Altisource, with direct ownership of global delivery teams,
+                enterprise transformation initiatives, automation platforms, and
+                quality engineering leadership.
               </p>
-              <p>
-                ENGXLABS was created to close that gap — to be the partner that
-                brings together deep AI engineering capability, business process
-                understanding, and a relentless focus on measurable outcomes.
-              </p>
-              <p>
-                Not another AI agency. Not another consulting firm. A true AI
-                transformation partner for businesses that are serious about
-                what comes next.
-              </p>
+            </div>
+
+            <div className="mt-8 flex flex-wrap gap-2">
+              {[
+                "EPAM Systems",
+                "Navi",
+                "Rakuten",
+                "OkCredit",
+                "Altisource",
+              ].map((org) => (
+                <span
+                  key={org}
+                  className="text-xs font-semibold px-3 py-1.5 rounded-full bg-white/[0.03] border border-white/[0.10] text-text-secondary"
+                >
+                  {org}
+                </span>
+              ))}
             </div>
           </motion.div>
 
@@ -78,9 +86,9 @@ export default function Founder() {
               <div className="space-y-3 mb-8">
                 {[
                   "10+ years enterprise engineering leadership",
-                  "Deep expertise in automation & quality engineering",
-                  "Global technology delivery background",
-                  "AI adoption & transformation specialist",
+                  "Automation platforms and quality engineering at scale",
+                  "Global delivery and cross-functional transformation",
+                  "AI operating model and adoption leadership",
                 ].map((point) => (
                   <div key={point} className="flex items-start gap-2.5 text-sm text-text-secondary">
                     <svg className="flex-shrink-0 text-accent-blue mt-0.5" width="14" height="14" viewBox="0 0 14 14" fill="none">

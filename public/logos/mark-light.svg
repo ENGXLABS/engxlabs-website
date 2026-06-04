@@ -1,0 +1,6 @@
+<!-- ENGXLABS mark — light (black on transparent, for light backgrounds) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
+  <title>ENGXLABS</title>
+  <rect x="15.5" y="-12" width="9" height="64" fill="#0A0A0A" transform="rotate(45 20 20)"/>
+  <rect x="15.5" y="-12" width="9" height="64" fill="#0A0A0A" transform="rotate(-45 20 20)"/>
+</svg>

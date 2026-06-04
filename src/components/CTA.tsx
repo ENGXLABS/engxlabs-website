@@ -8,7 +8,7 @@ export default function CTA() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="contact" ref={ref} className="relative py-32 overflow-hidden">
+    <section id="contact" ref={ref} className="relative py-20 md:py-28 lg:py-32 overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
 
       {/* Background effects */}
@@ -36,7 +36,7 @@ export default function CTA() {
             measurable outcomes — with engineering depth and strategic clarity.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+          <div className="flex flex-col gap-3 justify-center mb-10 md:mb-16 max-w-sm mx-auto sm:max-w-none sm:flex-row sm:flex-wrap">
             <a href="mailto:hello@engxlabs.com?subject=AI Transformation Assessment" className="btn-primary py-4 px-8 text-base">
               Book a Free AI Transformation Assessment
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -44,19 +44,22 @@ export default function CTA() {
               </svg>
             </a>
             <a href="mailto:hello@engxlabs.com?subject=Discovery Call" className="btn-secondary py-4 px-8 text-base">
-              Schedule a Discovery Call
+              Schedule a 30-Minute Discovery Call
+            </a>
+            <a href="mailto:hello@engxlabs.com?subject=AI Readiness Assessment" className="btn-secondary py-4 px-8 text-base">
+              Request AI Readiness Assessment
             </a>
           </div>
 
           {/* Trust signals */}
           <div className="grid sm:grid-cols-3 gap-6 max-w-2xl mx-auto">
             {[
-              { icon: "⚡", text: "Response within 24 hours" },
-              { icon: "🎯", text: "No commitment required" },
-              { icon: "🔒", text: "NDA available on request" },
+              { text: "Response within 24 hours" },
+              { text: "No commitment required" },
+              { text: "NDA available on request" },
             ].map((item) => (
               <div key={item.text} className="flex items-center justify-center gap-2 text-sm text-text-muted">
-                <span>{item.icon}</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-accent-blue" />
                 <span>{item.text}</span>
               </div>
             ))}

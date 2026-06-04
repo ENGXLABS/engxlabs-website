@@ -86,6 +86,39 @@ const solutions = [
   },
 ];
 
+const industries = [
+  {
+    name: "Healthcare",
+    problem: "Clinical and operational teams lose time in fragmented workflows and manual handoffs.",
+    outcome: "AI agents streamline intake, triage, and care ops so teams respond faster with better consistency.",
+  },
+  {
+    name: "Financial Services",
+    problem: "Risk, compliance, and service operations require high-volume, high-accuracy execution.",
+    outcome: "Intelligent automation reduces review time, improves compliance quality, and accelerates decisions.",
+  },
+  {
+    name: "Manufacturing",
+    problem: "Plants struggle with downtime visibility, process variation, and reporting delays.",
+    outcome: "AI copilots improve operational visibility, flag bottlenecks early, and optimize throughput.",
+  },
+  {
+    name: "Retail",
+    problem: "Teams need faster demand insights, customer support scale, and campaign coordination.",
+    outcome: "AI-powered workflows improve customer response times and help teams act on real-time signals.",
+  },
+  {
+    name: "Technology",
+    problem: "Engineering and product teams face pressure to ship quickly without sacrificing quality.",
+    outcome: "Engineering copilots accelerate delivery, improve release quality, and reduce cycle time.",
+  },
+  {
+    name: "Education",
+    problem: "Institutions need scalable learner support and operational efficiency with limited resources.",
+    outcome: "AI assistants improve learner engagement and automate repetitive admin workflows.",
+  },
+];
+
 const colorMap = {
   blue: {
     badge: "bg-blue-500/10 text-blue-400 border border-blue-500/20",
@@ -119,7 +152,7 @@ export default function Solutions() {
   const c = colorMap[activeSol.color as keyof typeof colorMap];
 
   return (
-    <section id="solutions" ref={ref} className="relative py-32 bg-bg-secondary overflow-hidden">
+    <section id="solutions" ref={ref} className="relative py-20 md:py-28 lg:py-32 bg-bg-secondary overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
 
@@ -128,10 +161,10 @@ export default function Solutions() {
           initial={{ opacity: 0, y: 24 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="mb-16"
+          className="mb-10 md:mb-16"
         >
           <p className="section-label">Solutions</p>
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
             <h2 className="heading-lg text-white max-w-xl">Examples of What We Build</h2>
             <p className="body-lg max-w-sm">
               Production-ready AI copilots designed for specific business
@@ -140,18 +173,19 @@ export default function Solutions() {
           </div>
         </motion.div>
 
-        {/* Tab selector */}
+        {/* Tab selector — horizontally scrollable on mobile */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.2, duration: 0.5 }}
-          className="flex flex-wrap gap-2 mb-10"
+          className="-mx-4 sm:mx-0 px-4 sm:px-0 overflow-x-auto mb-8 md:mb-10"
         >
+          <div className="flex gap-2 min-w-max sm:min-w-0 sm:flex-wrap pb-1">
           {solutions.map((s) => (
             <button
               key={s.id}
               onClick={() => setActive(s.id)}
-              className={`text-sm font-medium px-4 py-2 rounded-xl transition-all duration-200 ${
+              className={`flex-shrink-0 text-sm font-medium px-4 py-2 rounded-xl transition-all duration-200 ${
                 active === s.id
                   ? "bg-accent-blue/15 text-accent-blue border border-accent-blue/30"
                   : "text-text-secondary border border-transparent hover:text-text-primary hover:border-white/10"
@@ -160,6 +194,7 @@ export default function Solutions() {
               {s.title}
             </button>
           ))}
+          </div>
         </motion.div>
 
         {/* Active solution card */}
@@ -168,7 +203,7 @@ export default function Solutions() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
-          className={`group card-base ${c.border} ${c.glow} transition-all duration-300 p-8 lg:p-12`}
+          className={`group card-base ${c.border} ${c.glow} transition-all duration-300 p-5 sm:p-8 lg:p-12`}
         >
           <div className="grid lg:grid-cols-2 gap-10">
             <div>
@@ -202,6 +237,35 @@ export default function Solutions() {
                 </a>
               </div>
             </div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ delay: 0.35, duration: 0.6 }}
+          className="mt-16"
+        >
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 mb-8">
+            <h3 className="text-2xl md:text-3xl font-bold text-white tracking-tight">
+              Industry Solutions
+            </h3>
+            <p className="text-sm md:text-base text-text-secondary max-w-xl">
+              We adapt AI transformation programs for each industry based on business constraints,
+              operating realities, and measurable outcomes.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {industries.map((industry) => (
+              <div key={industry.name} className="card-base card-hover p-6">
+                <h4 className="text-base font-semibold text-white mb-3">{industry.name}</h4>
+                <p className="text-xs uppercase tracking-widest text-text-muted mb-1.5">Business Problem</p>
+                <p className="text-sm text-text-secondary leading-relaxed mb-4">{industry.problem}</p>
+                <p className="text-xs uppercase tracking-widest text-accent-blue mb-1.5">AI Outcome</p>
+                <p className="text-sm text-text-secondary leading-relaxed">{industry.outcome}</p>
+              </div>
+            ))}
           </div>
         </motion.div>
       </div>

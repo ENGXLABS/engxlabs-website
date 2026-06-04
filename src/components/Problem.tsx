@@ -61,7 +61,7 @@ export default function Problem() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="relative py-32 overflow-hidden">
+    <section ref={ref} className="relative py-20 md:py-28 lg:py-32 overflow-hidden">
       {/* Subtle separator line */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
@@ -70,7 +70,7 @@ export default function Problem() {
           initial={{ opacity: 0, y: 24 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="max-w-3xl mb-20"
+          className="max-w-3xl mb-12 md:mb-16 lg:mb-20"
         >
           <p className="section-label">The Challenge</p>
           <h2 className="heading-lg text-white mb-6">

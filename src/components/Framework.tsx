@@ -54,7 +54,7 @@ export default function Framework() {
   const [active, setActive] = useState(0);
 
   return (
-    <section id="method" ref={ref} className="relative py-32 overflow-hidden">
+    <section id="method" ref={ref} className="relative py-20 md:py-28 lg:py-32 overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
 
       {/* Left ambient glow */}
@@ -65,20 +65,21 @@ export default function Framework() {
           initial={{ opacity: 0, y: 24 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="mb-20 text-center max-w-3xl mx-auto"
+          className="mb-10 md:mb-16 lg:mb-20 text-center max-w-3xl mx-auto"
         >
-          <p className="section-label">Our Approach</p>
+          <p className="section-label">Our Methodology</p>
           <h2 className="heading-lg text-white mb-6">
-            From AI Exploration to AI Transformation
+            The ENGXLABS AI Transformation Framework
           </h2>
           <p className="body-lg">
-            A proven four-step framework that moves organizations from initial
-            discovery through full deployment — and then keeps improving.
+            A four-step execution model designed to move organizations from AI
+            readiness to measurable business outcomes.
           </p>
         </motion.div>
 
-        {/* Step selector timeline */}
-        <div className="flex items-center justify-center gap-0 mb-12 overflow-x-auto pb-2">
+        {/* Step selector timeline — scrollable on mobile */}
+        <div className="-mx-4 px-4 overflow-x-auto mb-8 md:mb-12">
+          <div className="flex items-center gap-0 min-w-max mx-auto w-fit pb-2">
           {steps.map((step, i) => {
             const c = colorMap[step.color as keyof typeof colorMap];
             return (
@@ -109,6 +110,7 @@ export default function Framework() {
               </div>
             );
           })}
+          </div>
         </div>
 
         {/* Active step detail */}
@@ -122,11 +124,11 @@ export default function Framework() {
             const step = steps[active];
             const c = colorMap[step.color as keyof typeof colorMap];
             return (
-              <div className={`card-base border ${c.border} ${c.bg} p-8 lg:p-12 max-w-4xl mx-auto`}>
+              <div className={`card-base border ${c.border} ${c.bg} p-5 sm:p-8 lg:p-12 max-w-4xl mx-auto`}>
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
-                    <div className={`text-5xl font-black ${c.num} mb-4 font-mono`}>{step.number}</div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{step.label}</h3>
+                    <div className={`text-4xl sm:text-5xl font-black ${c.num} mb-4 font-mono`}>{step.number}</div>
+                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">{step.label}</h3>
                     <p className="text-sm text-text-muted mb-4 uppercase tracking-widest font-semibold">{step.duration}</p>
                     <p className="text-text-secondary leading-relaxed">{step.description}</p>
                   </div>

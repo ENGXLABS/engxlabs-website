@@ -129,8 +129,8 @@ export default function Hero() {
       {/* Blue gradient top */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-accent-blue/[0.06] rounded-full blur-3xl pointer-events-none" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-24 lg:py-32">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-24 lg:py-32">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-24 items-center">
           {/* Left: Copy */}
           <div>
             <motion.div
@@ -160,26 +160,47 @@ export default function Hero() {
               transition={{ delay: 0.2, duration: 0.6 }}
               className="body-lg text-lg max-w-xl mb-10"
             >
-              ENGXLABS helps organizations transform operations, products, and
-              teams through AI-powered automation, intelligent agents, and modern
-              engineering solutions.
+              We help growing businesses deploy AI agents, automate operations,
+              and build AI native workflows without hiring an internal AI team.
             </motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
-              className="flex flex-wrap gap-4 mb-16"
+              className="flex flex-col sm:flex-row gap-3 mb-10 md:mb-16"
             >
-              <a href="#contact" className="btn-primary py-3.5 px-7 text-base">
-                Book a Strategy Session
+              <a href="#contact" className="btn-primary py-3.5 px-6 text-sm sm:text-base justify-center sm:justify-start">
+                Free AI Transformation Assessment
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </a>
-              <a href="#solutions" className="btn-secondary py-3.5 px-7 text-base">
+              <a href="#solutions" className="btn-secondary py-3.5 px-6 text-sm sm:text-base justify-center sm:justify-start">
                 Explore Solutions
               </a>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.36, duration: 0.6 }}
+              className="flex flex-wrap gap-2.5 mb-10"
+            >
+              {[
+                "AI Native Engineering",
+                "Enterprise Ready",
+                "Security First",
+                "Outcome Driven",
+                "Human + AI Collaboration",
+              ].map((tag) => (
+                <span
+                  key={tag}
+                  className="text-[11px] font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full border border-white/[0.10] bg-white/[0.03] text-text-secondary"
+                >
+                  {tag}
+                </span>
+              ))}
             </motion.div>
 
             {/* Stats */}
@@ -187,7 +208,7 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.6 }}
-              className="flex flex-wrap gap-8 pt-8 border-t border-white/[0.06]"
+              className="flex flex-wrap gap-6 sm:gap-8 pt-6 sm:pt-8 border-t border-white/[0.06]"
             >
               {[
                 { value: "10–500", label: "Employee businesses served" },

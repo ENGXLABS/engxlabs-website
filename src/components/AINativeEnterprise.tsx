@@ -24,7 +24,7 @@ export default function AINativeEnterprise() {
   const [active, setActive] = useState<string | null>(null);
 
   return (
-    <section ref={ref} className="relative py-32 bg-bg-secondary overflow-hidden">
+    <section ref={ref} className="relative py-20 md:py-28 lg:py-32 bg-bg-secondary overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
 
@@ -32,7 +32,7 @@ export default function AINativeEnterprise() {
       <div className="absolute right-0 top-1/2 -translate-y-1/2 w-96 h-96 bg-accent-blue/[0.04] rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left copy */}
           <motion.div
             initial={{ opacity: 0, x: -24 }}
@@ -44,15 +44,32 @@ export default function AINativeEnterprise() {
               What Does an AI Native Company Look Like?
             </h2>
             <p className="body-lg mb-8">
-              AI should not be another software tool bolted onto existing
-              workflows. It becomes a core capability embedded across every
-              business function — amplifying every team, every decision.
+              AI should not be another tool layered on top of old workflows.
+              It should become an operating layer that supports leadership,
+              teams, and decisions across the business.
             </p>
             <p className="text-sm text-text-secondary leading-relaxed mb-10">
               ENGXLABS designs and deploys AI agents that sit between your
-              leadership and your systems — giving every department an
-              intelligent copilot that works alongside your people.
+              teams and systems, while providing leadership with a live view of
+              performance through an executive AI dashboard.
             </p>
+
+            <div className="space-y-2.5 mb-10">
+              {[
+                "Leadership -> Executive AI Dashboard",
+                "Sales Team -> Sales Copilot",
+                "Support Team -> Support Agent",
+                "Engineering Team -> Engineering Copilot",
+                "Operations Team -> Operations Agent",
+              ].map((line) => (
+                <div
+                  key={line}
+                  className="text-sm text-text-secondary border border-white/[0.08] bg-white/[0.02] rounded-lg px-3 py-2"
+                >
+                  {line}
+                </div>
+              ))}
+            </div>
             <a href="#contact" className="btn-primary py-3.5 px-7 text-base">
               See How It Works
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none">

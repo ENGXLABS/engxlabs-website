@@ -1,11 +1,50 @@
 "use client";
 
-const footerLinks = {
-  Solutions: ["QE Copilot", "Engineering Copilot", "Delivery Copilot", "Knowledge Copilot", "Support Copilot"],
-  Services: ["AI Strategy & Transformation", "AI Agents", "AI Automation", "AI Engineering", "Managed AI Services"],
-  Industries: ["Healthcare", "Financial Services", "Manufacturing", "Education", "Retail", "Technology"],
-  Company: ["About", "Our Method", "Founder Story", "Contact", "hello@engxlabs.com"],
-};
+import { Logo } from "@/components/Logo";
+
+const footerSections = [
+  {
+    category: "Solutions",
+    links: [
+      { label: "AI Readiness Assessment", href: "#contact" },
+      { label: "AI Agent Deployment", href: "#solutions" },
+      { label: "Workflow Automation", href: "#services" },
+      { label: "AI Native Platforms", href: "#solutions" },
+      { label: "Managed AI Operations", href: "#services" },
+    ],
+  },
+  {
+    category: "Industries",
+    links: [
+      { label: "Healthcare", href: "#solutions" },
+      { label: "Financial Services", href: "#solutions" },
+      { label: "Manufacturing", href: "#solutions" },
+      { label: "Retail", href: "#solutions" },
+      { label: "Technology", href: "#solutions" },
+      { label: "Education", href: "#solutions" },
+    ],
+  },
+  {
+    category: "Resources",
+    links: [
+      { label: "Insights", href: "#" },
+      { label: "AI Transformation Guides", href: "#" },
+      { label: "Industry Playbooks", href: "#" },
+      { label: "Case Studies", href: "#" },
+      { label: "Thought Leadership", href: "#" },
+    ],
+  },
+  {
+    category: "Company",
+    links: [
+      { label: "Founder LinkedIn", href: "https://www.linkedin.com" },
+      { label: "Company LinkedIn", href: "https://www.linkedin.com" },
+      { label: "GitHub Organization", href: "https://github.com/ENGXLABS" },
+      { label: "Email: hello@engxlabs.com", href: "mailto:hello@engxlabs.com" },
+      { label: "Location: India", href: "#" },
+    ],
+  },
+];
 
 export default function Footer() {
   return (
@@ -14,28 +53,36 @@ export default function Footer() {
         {/* Top: Logo + tagline */}
         <div className="flex flex-col md:flex-row md:items-start justify-between gap-12 mb-16">
           <div className="max-w-xs">
-            <div className="flex items-center mb-4">
-              <span className="text-xl font-bold tracking-tight text-white">ENG</span>
-              <span className="text-xl font-bold tracking-tight text-accent-blue">X</span>
-              <span className="text-xl font-bold tracking-tight text-white">LABS</span>
+            <div className="mb-4">
+              <Logo markSize={18} textSize="text-base" variant="primary" />
             </div>
             <p className="text-sm text-text-secondary leading-relaxed mb-6">
               Building AI Native Businesses for the Future.
             </p>
             <div className="flex items-center gap-3">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-lg border border-white/[0.08] flex items-center justify-center text-text-muted hover:text-text-primary hover:border-white/20 transition-all"
-                aria-label="LinkedIn"
+                aria-label="Company LinkedIn"
               >
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                 </svg>
               </a>
               <a
-                href="https://github.com"
+                href="https://www.linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-lg border border-white/[0.08] flex items-center justify-center text-text-muted hover:text-text-primary hover:border-white/20 transition-all text-[10px] font-semibold"
+                aria-label="Founder LinkedIn"
+                title="Founder LinkedIn"
+              >
+                IN
+              </a>
+              <a
+                href="https://github.com/ENGXLABS"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-lg border border-white/[0.08] flex items-center justify-center text-text-muted hover:text-text-primary hover:border-white/20 transition-all"
@@ -46,21 +93,30 @@ export default function Footer() {
                 </svg>
               </a>
             </div>
+
+            <div className="mt-5 space-y-1.5 text-xs text-text-muted">
+              <p>
+                Email: <a href="mailto:hello@engxlabs.com" className="hover:text-text-secondary">hello@engxlabs.com</a>
+              </p>
+              <p>Location: India</p>
+            </div>
           </div>
 
           {/* Links grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {Object.entries(footerLinks).map(([category, links]) => (
-              <div key={category}>
-                <div className="text-xs font-semibold text-white uppercase tracking-widest mb-4">{category}</div>
+            {footerSections.map((section) => (
+              <div key={section.category}>
+                <div className="text-xs font-semibold text-white uppercase tracking-widest mb-4">{section.category}</div>
                 <ul className="space-y-2.5">
-                  {links.map((link) => (
-                    <li key={link}>
+                  {section.links.map((link) => (
+                    <li key={link.label}>
                       <a
-                        href={link.includes("@") ? `mailto:${link}` : "#"}
+                        href={link.href}
+                        target={link.href.startsWith("http") ? "_blank" : undefined}
+                        rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
                         className="text-xs text-text-muted hover:text-text-secondary transition-colors"
                       >
-                        {link}
+                        {link.label}
                       </a>
                     </li>
                   ))}
@@ -80,8 +136,8 @@ export default function Footer() {
             AI Native Engineering & Transformation
           </div>
           <div className="flex gap-6">
-            <a href="#" className="text-xs text-text-muted hover:text-text-secondary transition-colors">Privacy</a>
-            <a href="#" className="text-xs text-text-muted hover:text-text-secondary transition-colors">Terms</a>
+            <a href="/privacy" className="text-xs text-text-muted hover:text-text-secondary transition-colors">Privacy Policy</a>
+            <a href="/terms" className="text-xs text-text-muted hover:text-text-secondary transition-colors">Terms of Service</a>
           </div>
         </div>
       </div>
