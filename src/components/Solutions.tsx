@@ -191,7 +191,7 @@ export default function Solutions() {
                   : "text-text-secondary border border-transparent hover:text-text-primary hover:border-white/10"
               }`}
             >
-              {s.title}
+              {s.badge}
             </button>
           ))}
           </div>
@@ -258,7 +258,7 @@ export default function Solutions() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {industries.map((industry) => (
-              <div key={industry.name} className="card-base card-hover p-6">
+              <div key={industry.name} id={`industry-${industry.name.toLowerCase().replace(/\s+/g, "-")}`} className="card-base card-hover p-6 scroll-mt-28">
                 <h4 className="text-base font-semibold text-white mb-3">{industry.name}</h4>
                 <p className="text-xs uppercase tracking-widest text-text-muted mb-1.5">Business Problem</p>
                 <p className="text-sm text-text-secondary leading-relaxed mb-4">{industry.problem}</p>

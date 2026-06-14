@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import ContactForm from "@/components/ContactForm";
 
 export default function CTA() {
   const ref = useRef(null);
@@ -36,34 +37,7 @@ export default function CTA() {
             measurable outcomes — with engineering depth and strategic clarity.
           </p>
 
-          <div className="flex flex-col gap-3 justify-center mb-10 md:mb-16 max-w-sm mx-auto sm:max-w-none sm:flex-row sm:flex-wrap">
-            <a href="mailto:hello@engxlabs.com?subject=AI Transformation Assessment" className="btn-primary py-4 px-8 text-base">
-              Book a Free AI Transformation Assessment
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </a>
-            <a href="mailto:hello@engxlabs.com?subject=Discovery Call" className="btn-secondary py-4 px-8 text-base">
-              Schedule a 30-Minute Discovery Call
-            </a>
-            <a href="mailto:hello@engxlabs.com?subject=AI Readiness Assessment" className="btn-secondary py-4 px-8 text-base">
-              Request AI Readiness Assessment
-            </a>
-          </div>
-
-          {/* Trust signals */}
-          <div className="grid sm:grid-cols-3 gap-6 max-w-2xl mx-auto">
-            {[
-              { text: "Response within 24 hours" },
-              { text: "No commitment required" },
-              { text: "NDA available on request" },
-            ].map((item) => (
-              <div key={item.text} className="flex items-center justify-center gap-2 text-sm text-text-muted">
-                <span className="w-1.5 h-1.5 rounded-full bg-accent-blue" />
-                <span>{item.text}</span>
-              </div>
-            ))}
-          </div>
+          <ContactForm />
         </motion.div>
       </div>
     </section>

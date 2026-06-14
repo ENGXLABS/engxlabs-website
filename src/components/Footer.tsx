@@ -16,22 +16,21 @@ const footerSections = [
   {
     category: "Industries",
     links: [
-      { label: "Healthcare", href: "#solutions" },
-      { label: "Financial Services", href: "#solutions" },
-      { label: "Manufacturing", href: "#solutions" },
-      { label: "Retail", href: "#solutions" },
-      { label: "Technology", href: "#solutions" },
-      { label: "Education", href: "#solutions" },
+      { label: "Healthcare", href: "#industry-healthcare" },
+      { label: "Financial Services", href: "#industry-financial-services" },
+      { label: "Manufacturing", href: "#industry-manufacturing" },
+      { label: "Retail", href: "#industry-retail" },
+      { label: "Technology", href: "#industry-technology" },
+      { label: "Education", href: "#industry-education" },
     ],
   },
   {
     category: "Resources",
     links: [
-      { label: "Insights", href: "/blog" },
-      { label: "AI Transformation Guides", href: "/blog/adlc" },
-      { label: "Industry Playbooks", href: "#solutions" },
-      { label: "Case Studies", href: "#services" },
-      { label: "Thought Leadership", href: "/blog" },
+      { label: "Insights", href: "/resources/insights" },
+      { label: "AI Transformation Guides", href: "/resources/guides" },
+      { label: "Thought Leadership", href: "/resources/thought-leadership" },
+      { label: "Blog", href: "/blog" },
     ],
   },
   {
@@ -40,7 +39,6 @@ const footerSections = [
       { label: "Company LinkedIn", href: "https://www.linkedin.com/company/engxlabs/" },
       { label: "GitHub Organization", href: "https://github.com/ENGXLABS" },
       { label: "Email: hello@engxlabs.com", href: "mailto:hello@engxlabs.com" },
-      { label: "Location: India", href: "" },
     ],
   },
 ];

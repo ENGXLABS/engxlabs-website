@@ -54,3 +54,8 @@ pnpm-debug.log*
 
 # Design source assets (logos are rendered as inline SVG components)
 engxlabs-logo/
+
+# Local assistant/tooling metadata (non-project files)
+CLAUDE.md
+.claude/
+.github/
